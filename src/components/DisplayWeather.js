@@ -65,7 +65,7 @@ function DisplayWeather(props) {
                     <h4>Visibility</h4>
                   </td>
                   <td>
-                    <span>{data.visibility * 0.00062137} Miles</span>
+                    <span>{Math.floor(data.visibility * 0.00062137)} Miles</span>
                   </td>
                 </tr>
               </table>
