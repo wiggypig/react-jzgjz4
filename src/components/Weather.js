@@ -3,7 +3,7 @@ import DisplayWeather from "./DisplayWeather";
 import "./weather.css";
 
   function refreshWeather() {
-    // working out the details on when and where to call the 5 minute timer
+    /* working out the details on when and where to call the 5 minute timer */
       nIntervId = setInterval(Weather, 300000);
     }
 
