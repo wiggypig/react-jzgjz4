@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import DisplayWeather from "./DisplayWeather";
 import "./weather.css";
 
+  function refreshWeather() {
+      nIntervId = setInterval(Weather, 300000);
+    }
+
 function Weather() {
   const [weather, setWeather] = useState([]);
   const [form, setForm] = useState({
     city: "",
     country: "",
   });
-//  'https://api.openweathermap.org/data/2.5/forecast?q=${form.city},${form.country}&APPID=${APIKEY}`
 
   const APIKEY = "94782b26f0f7dd835a8faee04d659260";
   async function weatherData(e) {

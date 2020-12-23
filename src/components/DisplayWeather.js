@@ -20,7 +20,7 @@ function DisplayWeather(props) {
 
             <h1>
               {" "}
-              {Math.floor(((9/5) * (data.main.temp - 273.15)) + 32)}
+              {Math.floor(((1.8) * (data.main.temp - 273.15)) + 32)}
               <sup>o</sup>
             </h1>
             <span className="weather-main">{data.weather[0].main}</span>
