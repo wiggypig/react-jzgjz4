@@ -29,6 +29,7 @@
   color: grey;
   margin-top: -8px;
 }
+
 .displayweather h1 {
   font-size: 5rem;
   margin: -10px;
@@ -56,6 +57,7 @@
   left: 10px;
   font-size: 1.4rem;
 }
+
 .displayweather .weatherdetails {
   margin-left: 50px;
   margin-right: 50px;
@@ -65,6 +67,7 @@
   grid-template-rows: auto;
   grid-gap: 20px;
 }
+
 .displayweather .weatherdetails .section1 {
   justify-self: right;
   width: 300px;

@@ -33,6 +33,10 @@ function Weather() {
   const handleChange = (e) => {
     let name = e.target.name;
     let value = e.target.value;
+    
+    /* removing special char excluding the dash */
+    value = e.target.value.replace(/[!$%^&*()_+|~=`{}[:;<>?,.@#\]]/g, "");
+    e.target.value = value;
 
     if (name == "city") {
       setForm({ ...form, city: value });
@@ -52,7 +56,7 @@ function Weather() {
           name="city"
           onChange={(e) => handleChange(e)}
         />
-        &nbsp; &nbsp; &nbsp;&nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp;
         <input
           type="text"
           placeholder="Country"
