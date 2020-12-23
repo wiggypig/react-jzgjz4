@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import DisplayWeather from "./DisplayWeather";
 import "./weather.css";
+import "../key"
+
 
   function refreshWeather() {
     /* working out the details on when and where to call the 5 minute timer */
@@ -14,11 +16,11 @@ function Weather() {
     country: "",
   });
 
-  const APIKEY = "94782b26f0f7dd835a8faee04d659260";
+  const APIKEY = ${apiKeyCall};
   async function weatherData(e) {
     e.preventDefault();
     if (form.city == "") {
-      alert("Add values");
+      alert("Please give me something to work with");
     } else {
       const data = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${form.city},${form.country}&APPID=${APIKEY}`
@@ -35,7 +37,7 @@ function Weather() {
     let value = e.target.value;
     
     /* removing special char excluding the dash */
-    value = e.target.value.replace(/[!$%^&*()_+|~=`{}[:;<>?,.@#\]]/g, "");
+    value = e.target.value.replace(/[/0123456789!$%^&*()_+|~=`{}[:;<>?,.@#\]]/g, "");
     e.target.value = value;
 
     if (name == "city") {
