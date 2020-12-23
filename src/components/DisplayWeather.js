@@ -24,7 +24,7 @@ function DisplayWeather(props) {
               <sup>o</sup>
             </h1>
             <span className="weather-main">{data.weather[0].main}</span>
-            <img className="weather-icon" src={iconurl} alt="" srcset="" />
+            <img className="weather-icon" src={iconurl} alt=""/>
             <span className="weather-description">
               {" "}
               {data.weather[0].description}
